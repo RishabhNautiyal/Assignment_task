@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    Enter 1st Number:
+    <input type="double" value="" id="number1"><br><br>
+    Enter 2nd Number:
+    <input type="double" value="" id="number2"><br><br>
+    Enter the Operation you want to perform(Addition / Subtraction / Division / Multiplication):
+    <input type="text" value="" id="operatn">
+    <button onclick="operation()">Calculate</button><br><br>
+    <b>The answer is:</b><br><br>
+    <span id="result"></span>
+    <script>
+        function operation() {
+            var operation = document.getElementById('operatn').value;
+            var num1 = document.getElementById('number1').value;
+            var num2 = document.getElementById('number2').value;
+            if (operation == "Addition") {
+                let res = num1 + num2;
+                document.getElementById('result').innerHTML = res;
+            }
+            else if (operation == "Subtraction") {
+                let res = num1 - num2;
+                document.getElementById('result').innerHTML = res;
+            }
+            else if (operation == "Division") {
+                let res = num1 / num2;
+                document.getElementById('result').innerHTML = res;
+            }
+            else if (operation == "Multiplication") {
+                let res = num1 * num2;
+                document.getElementById('result').innerHTML = res;
+            }
+            else {
+                alert('Wrong operation');
+            }
+        }
+    </script>
+</body>
+
+</html>
